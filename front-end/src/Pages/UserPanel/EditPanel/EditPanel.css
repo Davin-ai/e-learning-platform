@@ -1,0 +1,136 @@
+/* ============================== Content Main Style ============================== */
+.basic-style-edit {
+    background-color: white;
+    margin-top: 3rem !important;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 4rem;
+    padding-bottom: 2rem;
+}
+
+.edit-personal div{
+  padding: 1.5rem;
+}
+
+.header-title span{
+  display: block;
+}
+
+.input-box label{
+  display: block;
+}
+
+.header-container{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.verified-img{
+  width: 14rem;
+}
+
+.main-title1{
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+
+.edit-input{
+  width: 90%;
+}
+
+input {
+    font-size: 1.5rem;
+    width: 100%;
+    border: 1px solid #dcdcdc;
+    padding: 0.8rem 1.5rem 0.8rem 4.2rem;
+    border-radius: 0.3rem;
+}
+
+.edit-personal{
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.edit-password div{
+  padding: 1.5rem;
+}
+
+.main-title2{
+  padding-top: 2rem;
+  font-size: 2rem;
+  color: #908f8f;
+}
+
+.edit-button{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-btn {
+  border: none;
+  margin-top: 1rem;
+  background-color: #2bce56;
+  color: var(--white-color);
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.7rem 1rem;
+  transition: all 400ms ease;
+  margin-left: 6rem;
+}
+.edit-btn:hover {
+  background-color: #33be58;
+} 
+
+.icon-re{
+  display: none !important;
+}
+
+/* .edit {
+  border-right: 2px solid #2bce56;
+  padding-right: 3rem;
+}
+.edit__label {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 1rem 0;
+  color: var(--dark-color);
+}
+.edit__input {
+  width: 100%;
+  border: none;
+  border: 1px solid #2bce56;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  padding: 0.5rem 1rem;
+  color: #464749;
+}
+.edit__help {
+  display: block;
+  font-style: italic;
+  font-weight: bold;
+  margin: 1rem 0;
+  font-size: 1.5rem;
+}
+.edit__password {
+  margin-top: 2rem;
+}
+.edit__password-title {
+  border-bottom: 2px solid #2bce56;
+  display: block;
+}
+.edit__btn {
+  border: none;
+  margin-top: 2rem;
+  background-color: #2bce56;
+  color: var(--white-color);
+  border-radius: 0.3rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0.7rem 1rem;
+  transition: all 400ms ease;
+}
+.edit__btn:hover {
+  background-color: #33be58;
+} */
+/* ============================== Content Main Style ============================== */

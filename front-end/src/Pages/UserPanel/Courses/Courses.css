@@ -1,0 +1,60 @@
+.container2-navbar p {
+  font-size: 2rem;
+  padding-top: 1.8rem;
+}
+
+
+.course-footer {
+  margin-top: auto;
+  /* مهم‌ترین بخش */
+  background: #e8f9ef;
+  /* سبز خیلی روشن مثل عکس */
+  padding: 1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* 🔥 دکمه */
+.continue-btn {
+  color: #28a96b;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+
+}
+
+.continue-btn:visited {
+  color: #28a96b;
+  /* ❗ visited هم آبی نشود */
+}
+
+.line-set {
+  border-bottom: 1px solid #dcdcdc;
+
+}
+
+
+
+
+/* ============================== Content Sidebar Style ============================== */
+.content-main {
+  margin: 3rem 0;
+}
+
+.sidebar__name {
+  color: var(--dark-color);
+  font-size: 1.7rem;
+}
+
+.sidebar__list {
+  margin-top: 0.7rem;
+}
+
+.sidebar__link {
+  display: block;
+  padding: 1rem 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* ============================== Content Sidebar Style ============================== */

@@ -1,0 +1,69 @@
+.presell {
+  margin: 5rem 0;
+}
+.custom-nav {
+  display: flex ;
+  justify-content: flex-end ; /* میاره سمت راست */
+  gap: 10px;                 /* فاصله بین دکمه‌ها */
+  margin-bottom: 15px;       /* فاصله از کارت‌ها */
+}
+
+.hidden-button2{
+  display: none !important;
+}
+
+.swiper-button-prev1,
+.swiper-button-next1 {
+  background: #fff;  
+  width: 60px;
+  height: 60px;
+  border: 2px solid #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4caf50;
+  /* padding: 8px 14px; */
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.swiper-button-prev1:hover,
+.swiper-button-next1:hover {
+  background: #4caf50;
+  color: #fff;
+}
+
+.mySwiper{
+    padding-bottom: 5rem;
+  }
+
+@media (max-width: 767px) {
+  .hidden-button{
+    display: none !important;
+  }
+  .hidden-button2{
+    display: flex !important;
+  }
+  .custom-nav{
+    justify-content: center;
+    order: 2;
+    width: 100%;
+  }
+  .mySwiper{
+    padding-bottom: 1.4rem;
+  }
+}
+
+/* .row.align-items-center{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 767px) {
+  .row.align-items-center{
+    flex-direction: column;
+    align-items: center;
+  }
+} */

@@ -1,0 +1,116 @@
+.sidebar {
+    background-color: white;
+    margin-top: 4rem;
+    margin-left: 3rem;
+    margin-right: 7rem;
+    padding: 1.5rem 3rem;
+    border-radius: 2rem;
+}
+
+.main-line {
+    display: inline-block;
+    border-bottom: 1px solid #D1D5DB;
+    padding-bottom: 2px;
+    margin-top: 0.5rem;
+    align-self: flex-start;
+}
+
+.sidebar-topbar {
+    display: flex;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+}
+
+.phone {
+    font-size: 1rem;
+    color: #6B7280;
+    padding-top: 0.5rem;
+}
+
+.sidebar__name {
+    font-size: 1.5rem !important;
+    font-weight: 600;
+}
+
+.profile-img {
+    width: 48px;
+    height: 48px;
+}
+
+.profile-icon {
+    display: flex;
+    gap: 1.5rem;
+    margin-right: 6rem;
+    padding-top: 1.5rem;
+    color: #6B7280;
+}
+
+.sidebar__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #333333;
+}
+
+
+.sidebar__item:hover .icon-style,
+.sidebar__item:hover .sidebar__link {
+    color: #22c55e !important;
+}
+
+
+.sidebar__item {
+    padding-top: 0.7rem;
+}
+
+.logout-icon,
+.setting-icon,
+.icon-style {
+    cursor: pointer;
+}
+
+.logout-icon:hover {
+    color: red;
+}
+
+.setting-icon:hover {
+    color: #4A4A4A;
+}
+
+.active-link {
+    color: #22c55e;
+}
+
+.active {
+    color: #22c55e;
+}
+
+.icon-style{
+    margin-left: 0.5rem;
+}
+
+
+@media (max-width: 1100px) {
+    .sidebar {
+        margin: 0 !important;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        height: 100%;
+    }
+
+    .sidebar-container {
+        padding: 0 1rem; /* اگر خواستی کمی فاصله داشته باشد */
+    }
+}
+
+@media (max-width: 750px){
+    .sidebar-container {
+        display: none;
+    }
+}

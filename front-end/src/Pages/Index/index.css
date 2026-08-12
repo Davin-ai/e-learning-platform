@@ -1,0 +1,14 @@
+
+
+@layer components {
+    .sub-menu{}
+}
+
+@layer utilities {
+    .flex-center {
+        @apply flex items-center;
+    }
+    .flex-center-between {
+        @apply flex items-center justify-between;
+    }
+}

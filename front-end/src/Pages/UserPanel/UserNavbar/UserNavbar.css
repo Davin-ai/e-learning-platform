@@ -1,0 +1,109 @@
+.bg {
+    background-color: white;
+    margin-top: 4rem;
+    border-radius: 1rem;
+}
+
+.courses-top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.courses-top-bar__right {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.courses-top-bar__left1 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.courses-top-bar__search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    color: #7d7e7f;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.icon-pac {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: -2rem;
+}
+
+.icon-style1 {
+    font-size: 2rem;
+}
+
+.date {
+    white-space: nowrap;
+}
+
+
+.divider {
+    width: 1px;
+    height: 25px;
+    background-color: #ccc;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger-line {
+    width: 28px;
+    height: 3px;
+    background: #000;
+    border-radius: 3px;
+}
+
+.sidebar-editing{
+    display: none;
+}
+
+@media (max-width: 1100px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .date,
+    .divider {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+
+    .sidebar-editing{
+        display: flex;
+    }
+
+    /* فرم سرچ مخفی بشه */
+    .courses-top-bar__form {
+        display: none;
+    }
+
+    /* ترتیب جدید در موبایل */
+    .hamburger {
+        display: flex !important;
+        order: 1;     /* سمت راست */
+    }
+
+    .courses-top-bar__left1 {
+        order: 2;     /* سمت چپ */
+        margin-right: auto;  /* هلش بده سمت چپ */
+    }
+
+}

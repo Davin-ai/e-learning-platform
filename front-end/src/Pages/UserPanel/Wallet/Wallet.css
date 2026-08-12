@@ -1,0 +1,153 @@
+.basic-style {
+    display: flex;
+    background-color: white;
+    margin-top: 3rem !important;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.first-section img {
+    width: 7rem;
+}
+
+.wallet-title {
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: #666666;
+    margin-top: 0.4rem;
+}
+
+.wallet-sub_title {
+    width: 200;
+    padding-top: 7%;
+}
+
+.wallet-title_head {
+    padding-right: 1rem;
+    padding-top: 1%;
+}
+
+.right-section img {
+    width: 7rem;
+}
+
+.right-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: 2rem;
+    padding-bottom: 2rem;
+}
+
+.left-button {
+    margin-right: auto;
+}
+
+.left-button button {
+    background-color: #CDE8CF;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.wallet-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* فاصله بین متن و آیکون */
+    background-color: #CDE8CF;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.wallet-btn i {
+    font-size: 1rem;
+}
+
+.Transaction-header {
+    display: flex;
+    justify-content: space-between;  /* این خط */
+    width: 100%;                     /* و این خط */
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.Transaction-header i {
+    margin-left: auto;
+} 
+
+.Transaction-header p{
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.basic-style2{
+    background-color: white;
+    margin-top: 3rem !important;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.Transaction-value{
+    margin-bottom: 1.3rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;   /* حذف فاصله بین سلول‌ها */
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;            /* گردی گوشه‌ها اعمال شود */
+  margin-top: 1.5rem;
+  direction: rtl;              /* راست‌چین */
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+
+tbody {
+  background: #f1f1f1;
+}
+
+thead th {
+  padding: 1rem;
+  font-weight: bold;
+  color: #555;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+tbody td {
+  padding: 2.3rem;
+  border-bottom: 1px solid #eee;
+  color: #444;
+  font-size: 1.5rem;
+}
+
+tbody tr:last-child td {
+  border-bottom: none; /* آخرین ردیف خط نداشته باشد */
+}
+
+
+/* وضعیت پرداخت موفق */
+td.status-success {
+  background: #E9F7EF;   /* سبز پاستلی ملایم */
+  color: #2E7D32;        /* سبز تیره اما لطیف */
+  font-weight: 500;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+   display: inline-block;
+}
+/* مرکز چین کردن مبلغ یا وضعیت در صورت نیاز */
+.center {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .first-section{
+    width: 100%;
+  }
+}
