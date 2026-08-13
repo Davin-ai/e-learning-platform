@@ -36,23 +36,23 @@ shopping cart functionality, and an admin panel.
 - Express
 - REST API
 
-## 📸 Screenshots
+## Screenshots
 
 ### Home Page
 
-_Add screenshot here_
+![Home Page](./screenshots/home.png)
 
 ### User Dashboard
 
-_Add screenshot here_
+![User Dashboard](./screenshots/dashboard.png)
 
 ### Admin Panel
 
-_Add screenshot here_
+![Admin Panel](./screenshots/admin.png)
 
 ### Shopping Cart
 
-_Add screenshot here_
+![Shopping Cart](./screenshots/cart.png)
 
 ## ⚙️ Installation
 
