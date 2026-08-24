@@ -12,9 +12,19 @@ export default function Navbar() {
   const [activeSubmenu, setActiveSubmenu] = useState(null)
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/v1/menus`).then(res => res.json())
-      .then(data => setAllMenus(data)
-      )
+    fetch(`${process.env.REACT_APP_API_URL}/v1/menus`)
+      .then(res => res.json())
+      .then(data => {
+        console.log("MENUS FROM API:", data)
+
+        const menus = data.map(menu => ({
+          ...menu,
+          submenus: menu.submenus || []
+        }))
+
+        setAllMenus(menus)
+      })
+      .catch(err => console.error("Menu fetch error:", err))
   }, [])
 
   const toggleSubmenu = (index) => {
