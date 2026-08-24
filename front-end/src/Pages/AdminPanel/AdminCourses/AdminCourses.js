@@ -45,7 +45,7 @@ export default function AdminCourses() {
   useEffect(() => {
     getAllCourses()
 
-    fetch(`http://localhost:4000/v1/category`).then((res) => res.json()).then((result) => {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/category`).then((res) => res.json()).then((result) => {
       console.log(result);
       setCategories(result)
     })
@@ -53,7 +53,7 @@ export default function AdminCourses() {
 
   function getAllCourses() {
     const localStorageData = JSON.parse(localStorage.getItem('user'))
-    fetch(`http://localhost:4000/v1/courses`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/courses`, {
       headers: {
         Authorization: `Bearer ${localStorageData.token}`
       }
@@ -72,7 +72,7 @@ export default function AdminCourses() {
       buttons: ["خیر", "اره"],
     }).then((result) => {
       if (result) {
-        fetch(`http://localhost:4000/v1/courses/${courseID}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/courses/${courseID}`, {
           method: 'DELETE',
           headers: {
             "Authorization": `Bearer ${localStorageData.token}`,
@@ -125,7 +125,7 @@ export default function AdminCourses() {
           buttons: "اوکی",
         })
     }else{
-      fetch(`http://localhost:4000/v1/courses`, {
+      fetch(`${process.env.REACT_APP_API_URL}/v1/courses`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${localStorageData.token}`

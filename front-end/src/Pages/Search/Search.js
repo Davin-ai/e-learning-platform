@@ -14,7 +14,7 @@ export default function Search() {
     const {value} = useParams()
 
     useEffect(() => {
-        fetch(`http://localhost:4000/v1/search/${value}`).then((res) => res.json()).then((result) => {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/search/${value}`).then((res) => res.json()).then((result) => {
             console.log(result);
             setArticles(result.allResultArticles)
             setCourses(result.allResultCourses)

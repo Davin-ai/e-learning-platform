@@ -31,7 +31,7 @@ export default function Sessions() {
 
         getAllSessions()
 
-        fetch("http://localhost:4000/v1/courses")
+        fetch(`${process.env.REACT_APP_API_URL}/v1/courses`)
             .then((res) => res.json())
             .then((allCourses) => {
                 console.log(allCourses);
@@ -52,7 +52,7 @@ export default function Sessions() {
         formData.append('video', sessionVideo)
         formData.append('free', isSessionFree)
 
-        fetch(`http://localhost:4000/v1/courses/${sessionCourse}/sessions`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/courses/${sessionCourse}/sessions`, {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${localStorageData.token}`
@@ -74,7 +74,7 @@ export default function Sessions() {
     }
 
     function getAllSessions() {
-        fetch(`http://localhost:4000/v1/courses/sessions`).then((res) => res.json()).then((data) => {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/courses/sessions`).then((res) => res.json()).then((data) => {
             console.log(data);
             setAllSession(data)
             setCourseName(data.course)
@@ -90,7 +90,7 @@ export default function Sessions() {
             buttons: ["خیر", "اره"],
         }).then((result) => {
             if (result) {
-                fetch(`http://localhost:4000/v1/courses/sessions/${sessionID}`, {
+                fetch(`${process.env.REACT_APP_API_URL}/v1/courses/sessions/${sessionID}`, {
                     method: 'DELETE',
                     headers: {
                         "Authorization": `Bearer ${localStorageData.token}`,

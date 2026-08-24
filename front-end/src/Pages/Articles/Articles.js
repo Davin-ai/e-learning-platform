@@ -13,7 +13,7 @@ export default function Articles() {
     const [shownArticles, setShownArticles] = useState([])
 
     useEffect(() => {
-            fetch(`http://localhost:4000/v1/articles`).then((res) => res.json()).then((result) => {
+            fetch(`${process.env.REACT_APP_API_URL}/v1/articles`).then((res) => res.json()).then((result) => {
                 console.log('result:', result);
                 
                 setArticles(result)

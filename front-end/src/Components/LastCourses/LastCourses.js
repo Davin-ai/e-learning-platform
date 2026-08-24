@@ -9,8 +9,9 @@ function LastCourses() {
     const [courses, setCourses] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:4000/v1/courses`).then((res) => res.json()).then((result) => {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/courses`).then((res) => res.json()).then((result) => {
             console.log('Reasult', result);
+            console.log('COVER:', result[0]?.cover)
             
             setCourses(result)
             

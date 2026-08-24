@@ -27,7 +27,7 @@ export default function Footer() {
           email: formState.inputs.email.value,
         };
     
-        fetch("http://localhost:4000/v1/newsletters", {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/newsletters`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

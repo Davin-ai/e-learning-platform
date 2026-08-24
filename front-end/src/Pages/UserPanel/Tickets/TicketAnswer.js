@@ -8,7 +8,7 @@ export default function TicketAnswer() {
   const [ticketInfo, setTicketInfo] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/tickets/answer/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/tickets/answer/${id}`, {
       headers: {
         Authorization: `Bearer ${
           JSON.parse(localStorage.getItem("user")).token

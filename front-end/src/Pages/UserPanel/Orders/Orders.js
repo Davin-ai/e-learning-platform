@@ -17,7 +17,7 @@ export default function Orders() {
     }, []);
 
     function getAllOrders() {
-        fetch(`http://localhost:4000/v1/orders`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/orders`, {
             headers: {
                 Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).token}`,
             },

@@ -8,7 +8,7 @@ export default function LastArticles() {
     const [articles, setArticles] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:4000/v1/articles`).then((res) => res.json()).then((data) => {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/articles`).then((res) => res.json()).then((data) => {
             console.log('TYPE:', typeof data);
             
             console.log(data);

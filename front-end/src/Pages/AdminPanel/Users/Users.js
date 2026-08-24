@@ -46,7 +46,7 @@ export default function Users() {
 
   const getAllUser = () => {
     const localStorageData = JSON.parse(localStorage.getItem('user'))
-    fetch(`http://localhost:4000/v1/users`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/users`, {
       headers: {
         Authorization: `Bearer ${localStorageData.token}`
       }
@@ -65,7 +65,7 @@ export default function Users() {
       buttons: ["نه", "اره"]
     }).then(result => {
       if (result) {
-        fetch(`http://localhost:4000/v1/users/${userID}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/users/${userID}`, {
           method: 'DELETE',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`
@@ -95,7 +95,7 @@ export default function Users() {
       buttons: ["نه", "اره"]
     }).then(result => {
       if (result) {
-        fetch(`http://localhost:4000/v1/users/ban/${userID}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/users/ban/${userID}`, {
           method: 'PUT',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`
@@ -124,7 +124,7 @@ export default function Users() {
       confirmPassword: formState.inputs.password.value,
     };
 
-    fetch('http://localhost:4000/v1/auth/register', {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/auth/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -155,7 +155,7 @@ export default function Users() {
           role: result,
           id: userID
         }
-        fetch(`http://localhost:4000/v1/users/role`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/users/role`, {
           method: 'PUT',
           headers: {
             Authorization: `Bearer ${localStorageData.token}`,

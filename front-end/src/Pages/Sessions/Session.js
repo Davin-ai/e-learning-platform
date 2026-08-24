@@ -13,7 +13,7 @@ export default function Session() {
   const [sessions, setSessions] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/courses/${courseName}/${sessionID}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/courses/${courseName}/${sessionID}`, {
       headers: {
         Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).token
           }`,
@@ -94,7 +94,7 @@ export default function Session() {
               <video
                 class="episode-content__video"
                 controls
-                src={`http://localhost:4000/courses/covers/${session.video}`}
+                src={`${process.env.REACT_APP_API_URL}/courses/covers/${session.video}`}
               ></video>
               <a class="episode-content__video-link" href="#">
                 دانلود ویدئو

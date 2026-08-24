@@ -13,7 +13,7 @@ export default function Courses() {
     const [shownCourses, setShownCourses] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:4000/v1/courses`).then((res) => res.json()).then((result) => setAllCourses(result))
+        fetch(`${process.env.REACT_APP_API_URL}/v1/courses`).then((res) => res.json()).then((result) => setAllCourses(result))
     }, [])
 
     return (

@@ -21,7 +21,7 @@ function Category() {
   const { categoryName } = useParams()
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/courses/category/${categoryName}`)
+    fetch(`${process.env.REACT_APP_API_URL}/v1/courses/category/${categoryName}`)
       .then(res => res.json())
       .then(result => {
         console.log('fetch result:', result)

@@ -7,7 +7,7 @@ export default function Index() {
   const [courses, setCourses] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/users/courses/`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/users/courses/`, {
       headers: {
         Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).token
           }`,
@@ -70,7 +70,7 @@ export default function Index() {
                         className="main__box-img img-fluid con-img"
                         src={
                           course.course.cover?.length
-                            ? `http://localhost:4000/courses/covers/${course.course.cover}`
+                            ? `${process.env.REACT_APP_API_URL}/courses/covers/${course.course.cover}`
                             : "/fareelancer.png"
                         }
                         alt={course.course.name}

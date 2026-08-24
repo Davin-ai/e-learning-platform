@@ -33,7 +33,7 @@ export default function AdminCategory() {
     }, [])
 
     function getAllCategory() {
-        fetch(`http://localhost:4000/v1/category`).then((res) => res.json()).then((result) => {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/category`).then((res) => res.json()).then((result) => {
             console.log(result);
             setCategory(result)
         })
@@ -48,7 +48,7 @@ export default function AdminCategory() {
             name: formState.inputs.shortname.value,
         };
 
-        fetch("http://localhost:4000/v1/category", {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/category`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -78,7 +78,7 @@ export default function AdminCategory() {
             buttons: ["خیر", "اره"],
         }).then((result) => {
             if (result) {
-                fetch(`http://localhost:4000/v1/category/${categoryID}`, {
+                fetch(`${process.env.REACT_APP_API_URL}/v1/category/${categoryID}`, {
                     method: 'DELETE',
                     headers: {
                         "Authorization": `Bearer ${localStorageData.token}`,
@@ -108,7 +108,7 @@ export default function AdminCategory() {
             console.log('result', result);
 
             if (result.trim().length) {
-                axios.put(`http://localhost:4000/v1/category/${categoryID}`,
+                axios.put(`${process.env.REACT_APP_API_URL}/v1/category/${categoryID}`,
                     // method: 'PUT',
                     {
                         name: nameI,

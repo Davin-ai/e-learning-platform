@@ -7,7 +7,7 @@ export default function Topbar() {
 
     useEffect(() => {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
-        fetch(`http://localhost:4000/v1/auth/me`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/auth/me`, {
             headers: {
                 Authorization: `Bearer ${localStorageData.token}`
             }

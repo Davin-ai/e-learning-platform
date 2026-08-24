@@ -28,7 +28,7 @@ export default function CourseInfo() {
   const getCourseDetails = () => {
     const localStorageData = JSON.parse(localStorage.getItem('user'))
 
-    fetch(`http://localhost:4000/v1/courses/${courseName}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/courses/${courseName}`, {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${localStorageData === null ? null : (
@@ -55,7 +55,7 @@ export default function CourseInfo() {
   useEffect(() => {
     getCourseDetails()
 
-    fetch(`http://localhost:4000/v1/courses/related/${courseName}`).then((res) => res.json()).then((data) => {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/courses/related/${courseName}`).then((res) => res.json()).then((data) => {
       console.log(data);
       setRelatedCourse(data)
     })
@@ -64,7 +64,7 @@ export default function CourseInfo() {
   const submitComment = (newCommentBody, commentScore) => {
     const localStorageData = JSON.parse(localStorage.getItem("user"))
 
-    fetch(`http://localhost:4000/v1/comments`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/comments`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${localStorageData.token}`,
@@ -97,7 +97,7 @@ export default function CourseInfo() {
         buttons: ["خیر", "اره"],
       }).then((result) => {
         if (result) {
-          fetch(`http://localhost:4000/v1/courses/${course._id}/register`, {
+          fetch(`${process.env.REACT_APP_API_URL}/v1/courses/${course._id}/register`, {
             method: 'POST',
             headers: {
               'Authorization': `Bearer ${localStorageData.token}`,
@@ -130,7 +130,7 @@ export default function CourseInfo() {
             buttons: ["ثبت نام بدون کد تخفیف", "اعمال کد تخفیف"],
           }).then((code) => {
             if (code === null) {
-              fetch(`http://localhost:4000/v1/courses/${course._id}/register`, {
+              fetch(`${process.env.REACT_APP_API_URL}/v1/courses/${course._id}/register`, {
                 method: 'POST',
                 headers: {
                   'Authorization': `Bearer ${localStorageData.token}`,
@@ -149,7 +149,7 @@ export default function CourseInfo() {
                 }
               })
             } else {
-              fetch(`http://localhost:4000/v1/offs/${code}`, {
+              fetch(`${process.env.REACT_APP_API_URL}/v1/offs/${code}`, {
                 method: 'POST',
                 headers: {
                   'Authorization': `Bearer ${localStorageData.token}`,
@@ -176,7 +176,7 @@ export default function CourseInfo() {
                 }
 
               }).then((code) => {
-                fetch(`http://localhost:4000/v1/courses/${course._id}/register`, {
+                fetch(`${process.env.REACT_APP_API_URL}/v1/courses/${course._id}/register`, {
                   method: 'POST',
                   headers: {
                     'Authorization': `Bearer ${localStorageData.token}`,
@@ -497,7 +497,7 @@ export default function CourseInfo() {
                           relatedCourse.map((course) => (
                             <li className="course-info__courses-list-item">
                               <Link to={`/course-info/${course.shortName}`} className="course-info__courses-link">
-                                <img src={`http://localhost:4000/courses/covers/${course.cover}`} alt="Course Cover" className="course-info__courses-img" />
+                                <img src={`${process.env.REACT_APP_API_URL}/courses/covers/${course.cover}`} alt="Course Cover" className="course-info__courses-img" />
                                 <span className="course-info__courses-text">
                                   {course.name}
                                 </span>

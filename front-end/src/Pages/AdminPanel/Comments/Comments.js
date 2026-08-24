@@ -12,7 +12,7 @@ export default function Comments() {
     }, [])
 
     function getAllComments() {
-        fetch(`http://localhost:4000/v1/comments`).then((res) => res.json()).then((data) => {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/comments`).then((res) => res.json()).then((data) => {
             console.log(data);
             setComments(data)
         })
@@ -27,7 +27,7 @@ export default function Comments() {
             buttons: ["خیر", "اره"],
         }).then((result) => {
             if (result) {
-                fetch(`http://localhost:4000/v1/comments/${commentID}`, {
+                fetch(`${process.env.REACT_APP_API_URL}/v1/comments/${commentID}`, {
                     method: 'DELETE',
                     headers: {
                         "Authorization": `Bearer ${localStorageData.token}`,
@@ -72,7 +72,7 @@ export default function Comments() {
             buttons: ["نه", "اره"]
         }).then(result => {
             if (result) {
-                fetch(`http://localhost:4000/v1/users/ban/${userID}`, {
+                fetch(`${process.env.REACT_APP_API_URL}/v1/users/ban/${userID}`, {
                     method: 'PUT',
                     headers: {
                         Authorization: `Bearer ${localStorageData.token}`
@@ -107,7 +107,7 @@ export default function Comments() {
                 body: value
             }
 
-            fetch(`http://localhost:4000/v1/comments/answer/${commentID}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/v1/comments/answer/${commentID}`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${localStorageData.token}`,
@@ -141,7 +141,7 @@ export default function Comments() {
             buttons: ["نه", "اره"]
         }).then(result => {
             if (result) {
-                fetch(`http://localhost:4000/v1/comments/accept/${commentID}`, {
+                fetch(`${process.env.REACT_APP_API_URL}/v1/comments/accept/${commentID}`, {
                     method: 'PUT',
                     headers: {
                         Authorization: `Bearer ${localStorageData.token}`
@@ -171,7 +171,7 @@ export default function Comments() {
             buttons: ["نه", "اره"]
         }).then(result => {
             if (result) {
-                fetch(`http://localhost:4000/v1/comments/reject/${commentID}`, {
+                fetch(`${process.env.REACT_APP_API_URL}/v1/comments/reject/${commentID}`, {
                     method: 'PUT',
                     headers: {
                         Authorization: `Bearer ${localStorageData.token}`

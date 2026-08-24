@@ -32,7 +32,7 @@ export default function Offs() {
     useEffect(() => {
         getAllOffs()
 
-        fetch("http://localhost:4000/v1/courses")
+        fetch(`${process.env.REACT_APP_API_URL}/v1/courses`)
             .then((res) => res.json())
             .then((allCourses) => {
                 console.log(allCourses);
@@ -43,7 +43,7 @@ export default function Offs() {
     function getAllOffs() {
         const localStorageData = JSON.parse(localStorage.getItem('user'))
 
-        fetch(`http://localhost:4000/v1/offs`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/offs`, {
             headers: {
                 Authorization: `Bearer ${localStorageData.token}`,
             }
@@ -64,7 +64,7 @@ export default function Offs() {
             course: offsCourses,
         }
 
-        fetch(`http://localhost:4000/v1/offs`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/offs`, {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${localStorageData.token}`,
@@ -94,7 +94,7 @@ export default function Offs() {
             buttons: ["خیر", "اره"],
         }).then((result) => {
             if (result) {
-                fetch(`http://localhost:4000/v1/offs/${offID}`, {
+                fetch(`${process.env.REACT_APP_API_URL}/v1/offs/${offID}`, {
                     method: 'DELETE',
                     headers: {
                         "Authorization": `Bearer ${localStorageData.token}`,

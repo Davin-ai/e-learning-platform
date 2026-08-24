@@ -17,7 +17,7 @@ function ArticleInfo() {
   const { articleName } = useParams()
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/articles/${articleName}`).then((res) => res.json()).then((data) => {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/articles/${articleName}`).then((res) => res.json()).then((data) => {
       console.log(data);
       setArticleDetails(data)
       setCategory(data.categoryID)

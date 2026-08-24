@@ -36,7 +36,7 @@ export default function AdminArticles() {
   useEffect(() => {
     getAllArticles()
 
-    fetch(`http://localhost:4000/v1/category`)
+    fetch(`${process.env.REACT_APP_API_URL}/v1/category`)
       .then((res) => res.json())
       .then((allCategories) => {
         setCategories(allCategories);
@@ -45,7 +45,7 @@ export default function AdminArticles() {
   }, [])
 
   function getAllArticles() {
-    fetch(`http://localhost:4000/v1/articles`).then((res) => res.json()).then((data) => {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/articles`).then((res) => res.json()).then((data) => {
       console.log(data);
       setArticles(data)
     })
@@ -60,7 +60,7 @@ export default function AdminArticles() {
       buttons: ["خیر", "اره"],
     }).then((result) => {
       if (result) {
-        fetch(`http://localhost:4000/v1/articles/${articleID}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/articles/${articleID}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${localStorageData.token}`
@@ -92,7 +92,7 @@ export default function AdminArticles() {
     formData.append('cover', articleCover)
     formData.append('body', articleBody)
 
-    fetch(`http://localhost:4000/v1/articles`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/articles`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${localStorageData.token}`
@@ -123,7 +123,7 @@ export default function AdminArticles() {
     formData.append('cover', articleCover)
     formData.append('body', articleBody)
 
-    fetch(`http://localhost:4000/v1/articles/draft`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/articles/draft`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${localStorageData.token}`

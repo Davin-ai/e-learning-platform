@@ -10,7 +10,7 @@ export default function AdminIndex() {
   const[lastRegisteredUser,setLastRegisteredUser] = useState([])
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/infos/p-admin`,{
+    fetch(`${process.env.REACT_APP_API_URL}/v1/infos/p-admin`,{
       headers: {
         Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).token
           }`,

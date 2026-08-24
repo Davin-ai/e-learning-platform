@@ -12,7 +12,7 @@ export default function Navbar() {
   const [activeSubmenu, setActiveSubmenu] = useState(null)
 
   useEffect(() => {
-    fetch(`http://localhost:4000/v1/menus`).then(res => res.json())
+    fetch(`${process.env.REACT_APP_API_URL}/v1/menus`).then(res => res.json())
       .then(data => setAllMenus(data)
       )
   }, [])

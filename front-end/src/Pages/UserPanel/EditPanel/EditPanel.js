@@ -32,7 +32,7 @@ export default function EditPanel() {
       password
     }
 
-    fetch(`http://localhost:4000/v1/users/`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/users/`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

@@ -18,11 +18,11 @@ export default function SendTickets() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:4000/v1/tickets/departments`)
+        fetch(`${process.env.REACT_APP_API_URL}/v1/tickets/departments`)
             .then((res) => res.json())
             .then((data) => setDepartments(data));
 
-        fetch(`http://localhost:4000/v1/users/courses/`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/users/courses/`, {
             headers: {
                 Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).token}`,
             },
@@ -35,7 +35,7 @@ export default function SendTickets() {
     }, []);
 
     const getDepartmentsSub = (departmentID) => {
-        fetch(`http://localhost:4000/v1/tickets/departments-subs/${departmentID}`)
+        fetch(`${process.env.REACT_APP_API_URL}/v1/tickets/departments-subs/${departmentID}`)
             .then((res) => res.json())
             .then((subs) => setDepartmentsSubs(subs));
     };
@@ -52,7 +52,7 @@ export default function SendTickets() {
             course: courseID.length ? courseID : undefined
         }
 
-        fetch(`http://localhost:4000/v1/tickets`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/tickets`, {
             method: 'POST',
             headers: {
                 Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).token}`,

@@ -12,7 +12,7 @@ export default function AdminContact() {
   }, [])
 
   function getAllContact(){
-    fetch(`http://localhost:4000/v1/contact`)
+    fetch(`${process.env.REACT_APP_API_URL}/v1/contact`)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -42,7 +42,7 @@ export default function AdminContact() {
         answer: value
       }
 
-      fetch(`http://localhost:4000/v1/contact/answer`, {
+      fetch(`${process.env.REACT_APP_API_URL}/v1/contact/answer`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${localStorageData.token}`,
@@ -70,7 +70,7 @@ export default function AdminContact() {
       buttons: ["خیر", "اره"],
     }).then((result) => {
       if (result) {
-        fetch(`http://localhost:4000/v1/contact/${contactID}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/contact/${contactID}`, {
           method: 'DELETE',
           headers: {
             'Authorization': `Bearer ${localStorageData.token}`

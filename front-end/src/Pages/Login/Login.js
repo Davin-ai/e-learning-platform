@@ -40,7 +40,7 @@ export default function Login() {
             password: formState.inputs.password.value
         }
 
-        fetch(`http://localhost:4000/v1/auth/login`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/auth/login`, {
             method: 'POST',
             headers: {
                 "Content-Type": "application/json",

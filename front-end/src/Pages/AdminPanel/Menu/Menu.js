@@ -29,7 +29,7 @@ export default function Menus() {
   }, []);
 
   function getAllMenus() {
-    fetch("http://localhost:4000/v1/menus/all")
+    fetch(`${process.env.REACT_APP_API_URL}/v1/menus/all`)
       .then((res) => res.json())
       .then((allMenus) => setMenus(allMenus));
   }
@@ -41,7 +41,7 @@ export default function Menus() {
       buttons: ["نه", "آره"],
     }).then((result) => {
       if (result) {
-        fetch(`http://localhost:4000/v1/menus/${menuID}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/v1/menus/${menuID}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).token
@@ -71,7 +71,7 @@ export default function Menus() {
       parent: menuParent === '-1' ? undefined : menuParent,
     }
 
-    fetch(`http://localhost:4000/v1/menus`, {
+    fetch(`${process.env.REACT_APP_API_URL}/v1/menus`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).token

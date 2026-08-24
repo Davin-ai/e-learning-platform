@@ -9,13 +9,20 @@ function CourseBox(props) {
 
   const onImgLoaded = () => setIsImgLoaded(true)
 
+  console.log('COURSE COVER:', props.cover)
+
   return (
 
     <div className="col-12 col-md-4 main-1" style={{ width: `${props.isSlider && '100%'}` }}>
       <div className="course-box">
         <Link to={`/course-info/${props.shortName}`}>
-          {/* src={`http://localhost:4000/v1/courses/covers/${props.cover}`} */}
-          <img src="/images/courses/fareelancer.png" alt="Course img" className="course-box__img" onLoad={onImgLoaded} />
+          {/* src={`${process.env.REACT_APP_API_URL}/v1/courses/covers/${props.cover}`} */}
+          <img
+             src={`${process.env.REACT_APP_API_URL}/courses/covers/${props.cover}`}
+            alt={props.name}
+            className="course-box__img"
+            onLoad={onImgLoaded}
+          />
         </Link>
         {
           !isImgLoaded && (
@@ -64,7 +71,7 @@ function CourseBox(props) {
           </Link>
         </div>
         {
-          (props.price !==0 && props.discount) && (
+          (props.price !== 0 && props.discount) && (
             <span className='course-box__discount'>%{props.discount}</span>
           )
         }

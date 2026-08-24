@@ -13,7 +13,7 @@ export default function AdminTickets() {
     }, [])
 
     function getAllTicket (){
-         fetch(`http://localhost:4000/v1/tickets`, {
+         fetch(`${process.env.REACT_APP_API_URL}/v1/tickets`, {
             headers: {
                 Authorization: `Bearer ${JSON.parse(localStorage.getItem("user")).token}`
             }
@@ -47,7 +47,7 @@ export default function AdminTickets() {
                 body: value
             }
 
-            fetch(`http://localhost:4000/v1/tickets/answer`, {
+            fetch(`${process.env.REACT_APP_API_URL}/v1/tickets/answer`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${localStorageData.token}`,
