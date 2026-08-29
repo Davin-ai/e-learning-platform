@@ -11,6 +11,8 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSubmenu, setActiveSubmenu] = useState(null)
 
+  console.log("THIS IS MY NEW NAVBAR VERSION");
+
   useEffect(() => {
     fetch(`${process.env.REACT_APP_API_URL}/v1/menus`)
       .then(res => res.json())
