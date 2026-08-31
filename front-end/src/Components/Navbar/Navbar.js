@@ -40,7 +40,7 @@ export default function Navbar() {
           <div className="main-header__right">
             <Link to={'/'}>
               <img
-                src="/images/logo/Logo.png"
+                src="/Images/logo/Logo.png"
                 className="main-header__logo"
                 alt="لوگوی سبزلرن"
               />
