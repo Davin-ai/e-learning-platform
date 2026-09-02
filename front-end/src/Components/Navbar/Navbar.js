@@ -19,10 +19,12 @@ export default function Navbar() {
       .then(data => {
         console.log("MENUS FROM API:", data)
 
-        const menus = data.map(menu => ({
-          ...menu,
-          submenus: menu.submenus || []
-        }))
+        const menus = data
+          .filter(menu => menu.href !== 'set-projects-price')
+          .map(menu => ({
+            ...menu,
+            submenus: menu.submenus || []
+          }))
 
         setAllMenus(menus)
       })
@@ -43,6 +45,7 @@ export default function Navbar() {
                 src="/Images/logo/Logo.png"
                 className="main-header__logo"
                 alt="لوگوی سبزلرن"
+                style={{ width: '60px', height: 'auto' }}
               />
             </Link>
 
