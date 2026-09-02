@@ -43,6 +43,7 @@
   justify-content: center;
   position: relative;
   padding: 0 1rem;
+  flex-shrink: 0;
 }
 
 .main-header__link {
@@ -51,6 +52,7 @@
   justify-content: center;
   position: relative;
   color: #7f8187;
+  white-space: nowrap;
 }
 
 .main-header__link:hover {
@@ -379,7 +381,7 @@
 }
 
 
-@media (max-width: 1270px) {
+@media (max-width: 1400px) {
   .hamburger {
     display: flex;
   }
