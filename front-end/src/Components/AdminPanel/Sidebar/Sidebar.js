@@ -29,7 +29,7 @@ export default function Sidebar() {
         <div id="sidebar" class="col-2">
             <div class="sidebar-header">
                 <div class="sidebar-logo">
-                    <a href="#"><img src="/images/logo/Logo.png" alt="Logo" /></a>
+                    <a href="#"><img src="/Images/logo/Logo.png" alt="Logo" /></a>
                 </div>
 
                 <div class="sidebar-menu-btn">

@@ -84,7 +84,7 @@ export default function Sidebar() {
         <div className="sidebar">
           <div className='main-line'>
             <div className='sidebar-topbar'>
-              <img className='profile-img' src="/images/user1.png" alt="" />
+              <img className='profile-img' src="/Images/user1.png" alt="" />
               <div className='user-info'>
                 <span className="sidebar__name">محمدامین</span>
                 <span className="phone">09123239876</span>

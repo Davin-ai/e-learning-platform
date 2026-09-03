@@ -222,12 +222,12 @@ export default function Comments() {
                                     <td>
                                         {
                                             Array(5 - comment.score).fill(0).map(item => (
-                                                <img src='/images/svgs/star.svg' alt='score'/>
+                                                <img src='/Images/svgs/star.svg' alt='score'/>
                                             ))
                                         }
                                         {
                                             Array(comment.score).fill(0).map(item => (
-                                                <img src='/images/svgs/star_fill.svg' alt='score'/>
+                                                <img src='/Images/svgs/star_fill.svg' alt='score'/>
                                             ))
                                         }
                                     </td>

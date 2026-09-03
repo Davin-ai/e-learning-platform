@@ -55,7 +55,7 @@ export default function Topbar() {
                         <div class="home-profile">
                             <div class="home-profile-image">
                                 <a href="#">
-                                    <img src="/images/piolt.png" alt="" />
+                                    <img src="/Images/piolt.png" alt="" />
                                 </a>
                             </div>
                             <div class="home-profile-name">

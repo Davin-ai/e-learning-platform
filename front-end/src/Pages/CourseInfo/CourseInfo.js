@@ -306,7 +306,7 @@ export default function CourseInfo() {
                     <span className="introduction__title title">
                       آموزش 20 کتابخانه جاوا اسکریپت مخصوص بازار کار
                     </span>
-                    <img src="/images/info/1.gif" alt="course info image" className="introduction__img img-fluid" />
+                    <img src="/Images/info/1.gif" alt="course info image" className="introduction__img img-fluid" />
                     <p className="introduction__text">
                       کتابخانه های بسیار زیادی برای زبان جاوا اسکریپت وجود دارد و سالانه چندین کتابخانه جدید نیز به این لیست اضافه می شود که در بازار کار به شدت از آن ها استفاده می شود و اگر بدون بلد بودن این کتابخانه ها وارد بازار کار شوید، خیلی اذیت خواهید شد و حتی ممکن است ناامید شوید!
                     </p>
@@ -318,7 +318,7 @@ export default function CourseInfo() {
                     <span className="introduction__title title">
                       هدف از این دوره چیست؟ (تنها راه ورود به بازار کار و کسب درآمد)
                     </span>
-                    <img src="/images/info/2.jpg" alt="course info image" className="introduction__img img-fluid" />
+                    <img src="/Images/info/2.jpg" alt="course info image" className="introduction__img img-fluid" />
                     <p className="introduction__text">
                       وقتی برای اولین بار وارد یکی از شرکت های برنامه نویسی شدم، از کتابخانه هایی به اسم Lodash و Formik استفاده می شد، در حالی که من اولین بارم بود اسم Formik را می شنیدم و تا اون موقع از این کتابخانه ها استفاده نکرده بودم.
                     </p>
@@ -395,7 +395,7 @@ export default function CourseInfo() {
                 <div className="techer-details">
                   <div className="techer-details__header">
                     <div className="techer-details__header-right">
-                      <img src="/images/info/teacher.jfif" alt="Teacher Profile" className="techer-details__header-img" />
+                      <img src="/Images/info/teacher.jfif" alt="Teacher Profile" className="techer-details__header-img" />
                       <div className="techer-details__header-titles">
                         <a href="#" className="techer-details__header-link">{courseTeacher.name}</a>
                         <span className="techer-details__header-skill">

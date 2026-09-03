@@ -161,7 +161,7 @@ function Category() {
                                           href="#"
                                         >
                                           <img
-                                            src="/images/courses/fareelancer.png"
+                                            src="/Images/courses/fareelancer.png"
                                             class="course__box-right-img"
                                           />
                                         </a>
@@ -184,19 +184,19 @@ function Category() {
                                           </div>
                                           <div class="course__box-left-stars">
                                             <span class="course__box-left-star">
-                                              <img src="/images/svgs/star_fill.svg" />
+                                              <img src="/Images/svgs/star_fill.svg" />
                                             </span>
                                             <span class="course__box-left-star">
-                                              <img src="/images/svgs/star_fill.svg" />
+                                              <img src="/Images/svgs/star_fill.svg" />
                                             </span>
                                             <span class="course__box-left-star">
-                                              <img src="/images/svgs/star_fill.svg" />
+                                              <img src="/Images/svgs/star_fill.svg" />
                                             </span>
                                             <span class="course__box-left-star">
-                                              <img src="/images/svgs/star_fill.svg" />
+                                              <img src="/Images/svgs/star_fill.svg" />
                                             </span>
                                             <span class="course__box-left-star">
-                                              <img src="/images/svgs/star_fill.svg" />
+                                              <img src="/Images/svgs/star_fill.svg" />
                                             </span>
                                           </div>
                                         </div>

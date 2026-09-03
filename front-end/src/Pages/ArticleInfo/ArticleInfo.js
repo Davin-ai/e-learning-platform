@@ -69,14 +69,14 @@ function ArticleInfo() {
                     </span>
                   </div>
                 </div>
-                <img src="/images/blog/1.jpg" alt="Article Cover" className="article__banner" />
+                <img src="/Images/blog/1.jpg" alt="Article Cover" className="article__banner" />
                 <div className="article__score">
                   <div className="article__score-icons">
-                    <img src="/images/svgs/star_fill.svg" className="article__score-icon" />
-                    <img src="/images/svgs/star_fill.svg" className="article__score-icon" />
-                    <img src="/images/svgs/star_fill.svg" className="article__score-icon" />
-                    <img src="/images/svgs/star_fill.svg" className="article__score-icon" />
-                    <img src="/images/svgs/star.svg" className="article__score-icon" />
+                    <img src="/Images/svgs/star_fill.svg" className="article__score-icon" />
+                    <img src="/Images/svgs/star_fill.svg" className="article__score-icon" />
+                    <img src="/Images/svgs/star_fill.svg" className="article__score-icon" />
+                    <img src="/Images/svgs/star_fill.svg" className="article__score-icon" />
+                    <img src="/Images/svgs/star.svg" className="article__score-icon" />
                   </div>
                   <span className="article__score-text">4.2/5 - (5 امتیاز)</span>
                 </div>
@@ -100,7 +100,7 @@ function ArticleInfo() {
                   </ul>
                 </div>
 
-                <img src="/images/blog/2.jpg" alt="Article Image" className="article__seconadary-banner" />
+                <img src="/Images/blog/2.jpg" alt="Article Image" className="article__seconadary-banner" />
                 {/* <div className="article-section">
                   <h2 className="article-section__title">
                     معرفی بهترین سایت ‌های آموزش جاوا اسکریپت:
