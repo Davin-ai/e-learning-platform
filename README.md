@@ -2,10 +2,13 @@
 
 A full-featured e-learning platform built with React and JavaScript.
 
-The project includes a public website, user authentication, user dashboard,
-shopping cart functionality, and an admin panel.
+The project includes a public website, user authentication, user dashboard, shopping cart functionality, and an admin panel.
 
-## 🚀 Features
+🌐 Live Demo
+
+https://e-learning-frontend-fx88d0z5v-davins-projects-ba0231a9.vercel.app
+
+## Features
 
 - User registration and login
 - Authentication
@@ -18,7 +21,7 @@ shopping cart functionality, and an admin panel.
 - Shared state management
 - Responsive design
 
-## 🛠️ Technologies
+## Technologies
 
 ### Frontend
 
@@ -54,7 +57,7 @@ shopping cart functionality, and an admin panel.
 
 ![Shopping Cart](./screenshots/cart.png)
 
-## ⚙️ Installation
+## Installation
 
 Clone the repository:
 
